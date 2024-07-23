@@ -1,5 +1,7 @@
-import { connectToDB } from "@/utils/database";
 import Prompt from "@/models/prompt"
+import User from "@/models/user"
+import { connectToDB } from "@/utils/database";
+
 
 export const GET = async (req: Request) => {
   console.log("I am actually running")
