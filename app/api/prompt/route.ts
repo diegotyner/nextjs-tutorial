@@ -10,7 +10,7 @@ export const GET = async (req: Request) => {
 
     return new Response(JSON.stringify(prompts), { status: 200,   headers: { 'Cache-Control': 'no-store' }, })
   } catch (error) {
-    return new Response("Failed to fetch all prompts", { status: 500 })
+    return new Response("Failed to fetch all prompts", { status: 501 })
   }
 }
 
