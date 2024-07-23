@@ -12,3 +12,5 @@ export const GET = async (req: Request) => {
     return new Response("Failed to fetch all prompts", { status: 500 })
   }
 }
+
+export const revalidate = 0;
