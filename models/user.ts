@@ -1,4 +1,5 @@
 import { Schema, model, models } from "mongoose";
+console.log("Registering User model");
 
 const UserSchema = new Schema({
   email: {
@@ -17,4 +18,5 @@ const UserSchema = new Schema({
 });
 
 const User = models.User || model("User", UserSchema);
+console.log("User model registered");
 export default User;

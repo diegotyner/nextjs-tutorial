@@ -4,15 +4,16 @@ import { connectToDB } from "@/utils/database";
 
 
 export const GET = async (req: Request) => {
-  console.log("I am actually running")
+  console.log("API route /api/prompt called");
   try {
     await connectToDB();
+    console.log("Fetching prompts...");
     const prompts = await Prompt.find({})
     console.log("Promps fetched successfully")
 
     return new Response(JSON.stringify(prompts), { status: 200,   headers: { 'Cache-Control': 'no-store' }, })
   } catch (error) {
-    console.log(error)
+    console.log("Error fetching prompts:", error);
     return new Response("Failed to fetch all prompts", { status: 501 })
   }
 }
