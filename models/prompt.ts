@@ -1,5 +1,6 @@
 import {Schema, model, models } from 'mongoose';
 import User from './user';
+console.log('Prompt.ts - User model registered:', models.User ? true : false);
 
 const PromptSchema = new Schema ({
   creator: {
