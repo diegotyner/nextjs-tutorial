@@ -1,5 +1,4 @@
 import {Schema, model, models } from 'mongoose';
-import User from './user';
 console.log("Registering Prompt model");
 
 const PromptSchema = new Schema ({
@@ -18,5 +17,4 @@ const PromptSchema = new Schema ({
 });
 
 const Prompt = models.Prompt || model('Prompt', PromptSchema);
-console.log("Prompt model registered");
 export default Prompt;

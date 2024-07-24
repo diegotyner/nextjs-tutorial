@@ -1,4 +1,6 @@
 import mongoose from 'mongoose';
+import User from '@/models/user';  // Ensure User model is imported
+import Prompt from '@/models/prompt';  // Ensure Prompt model is imported
 
 let isConnected = false; 
 
