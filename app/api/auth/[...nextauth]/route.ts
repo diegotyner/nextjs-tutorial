@@ -20,7 +20,7 @@ const handler = NextAuth({
     },
     async signIn({ profile }) {
         try {
-          // sserverless -> lambda -> dynamodb
+          // Serverless -> lambda -> dynamodb
           await connectToDB();
           console.log("User: ", profile)
           if (!profile || !profile.name) {

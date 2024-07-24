@@ -1,5 +1,4 @@
 import {Schema, model, models } from 'mongoose';
-console.log("Registering Prompt model");
 
 const PromptSchema = new Schema ({
   creator: {
