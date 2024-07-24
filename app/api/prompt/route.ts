@@ -8,7 +8,7 @@ export const GET = async (req: Request) => {
   try {
     await connectToDB();
     console.log("Fetching prompts...");
-    const prompts = await Prompt.find({})
+    const prompts = await Prompt.find({}).populate("creator")
     console.log("Promps fetched successfully")
 
     return new Response(JSON.stringify(prompts), { status: 200,   headers: { 'Cache-Control': 'no-store' }, })
